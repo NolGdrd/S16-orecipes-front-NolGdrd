@@ -6,13 +6,12 @@ function Header() {
             <img src="src\assets\logo.png" alt="logo" className="logo" />
             <form className="auth-form">
                 <div>
-                    <label for="email">Adresse mail </label>
-                    <input type="text" name="email" id="email" /> 
+                    <input className="auth-form-input" type="text" name="email" id="email" placeholder="Adresse mail"/> 
                 </div>
                 <div>
-                    <label for="password">Password </label>
-                    <input type="text" name="password" id="password" /> 
+                    <input className="auth-form-input" type="text" name="password" id="password" placeholder="Password" /> 
                 </div>
+                <button type="submit" className="auth-form-button">OK</button>
             </form>
         </header>
     )

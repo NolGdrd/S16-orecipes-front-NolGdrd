@@ -1,3 +1,35 @@
-.logo{
-    height: 3rem;
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+    padding: 1rem 2rem;
+    width: 80%;
+    top: 0;
+    position:absolute;
+    height: 5rem;
 }
+
+.auth-form{
+    display: flex;
+    gap: 1rem;
+
+    &-input{
+        padding: 0.7rem;
+        border: 1px solid gray;
+        border-radius: 0.5rem;
+    }
+
+    &-button{
+        background-color:rgb(32,156,238);
+        color: #fff;
+        border-radius: 20%;
+        border: none;
+        padding: 0.7rem;
+    }
+}
+
+.logo{
+    height: 4rem;
+}
+
