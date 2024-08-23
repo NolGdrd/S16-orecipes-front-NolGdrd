@@ -1,6 +1,12 @@
 import Card from "../Card/Card";
 import "./Cards.scss";
-function Cards() {
+import type { IRecipe } from '../../@types/index';
+
+interface CardsProps {
+  recipes: IRecipe[]
+}
+
+function Cards({ recipes }: CardsProps) {
   return (
     <div className="container-list-card">
       <div className="div-title">
@@ -9,7 +15,9 @@ function Cards() {
       <h2 className="sub-title">Voici nos recettes</h2>
 
       <div className="cards-list">
-        <Card />
+      {recipes.map(recipe => (
+          <Card key={recipe.id} recipe={recipe} />
+        ))}
       </div>
     </div>
   );
