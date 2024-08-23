@@ -4,12 +4,13 @@ import axios from 'axios'
 import './App.scss'
 import Header from '../Header/Header'
 import NavSideBar from '../NavSideBar/NavSideBar'
-import Cards from '../cards/Cards'
+import Cards from '../Cards/Cards'
 import CardDetails from '../Card-details/Card-details'
 
 
 import type { IRecipe, IIngredient } from '../../@types'
 import Spinner from '../Spinner/Spinner'
+import NotFound from "../NotFound/NotFound";
 
 
 
@@ -66,12 +67,10 @@ function App() {
               element={<Cards recipes={recipes}/>} 
             />
             {recipes.map(recipe => (
-              <Route 
-                key={recipe.id}
-                path={`/${recipe.slug}`}
-                element={<CardDetails recipe={recipe} />}
+              <Route key={recipe.id} path={`/${recipe.slug}`} element={<CardDetails recipe={recipe} />}
               />
             ))}
+            <Route path="*" element={<NotFound/>}/>
           </Routes>
           )
         }

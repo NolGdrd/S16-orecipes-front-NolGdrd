@@ -16,7 +16,7 @@ function Card({ recipe }: CardProps) {
           <h2>{recipe.title}</h2>
           <p>{recipe.difficulty}</p>
           <div className="btn-container">
-            <a href="#" className="btn">
+            <a href={`/${recipe.slug}`} className="btn">
               Voir Détails
             </a>
           </div>
