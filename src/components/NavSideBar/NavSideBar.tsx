@@ -9,7 +9,7 @@ interface NavSideBarProps {
 function NavSideBar({ recipes }: NavSideBarProps) {
     return (
         <nav className="nav-side-bar">
-            <Link className="nav-side-bar-item" href="/">Accueil</Link>
+            <Link className="nav-side-bar-item" to="/">Accueil</Link>
             {
                 recipes.map(recipe => {
                     return (
