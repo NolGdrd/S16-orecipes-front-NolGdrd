@@ -4,7 +4,7 @@ import axios from 'axios'
 import './App.scss'
 import Header from '../Header/Header'
 import NavSideBar from '../NavSideBar/NavSideBar'
-import Cards from '../cards/Cards'
+import Cards from '../Cards/Cards'
 
 
 import type { IRecipe, IIngredient } from '../../@types'
