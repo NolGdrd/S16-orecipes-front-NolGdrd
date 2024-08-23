@@ -1,9 +1,19 @@
 
+.div-title{
+  font-size: 3rem;
+  color: rgb(32,156,238);
+}
+
 .cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;  
+  padding-bottom: 4rem;;
   width: 50%;
   }
   .card {
-    width: 300px;
+    width: 50%;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -25,6 +35,7 @@
     margin-top: 0;
     font-size: 1.5em;
     margin-bottom: 10px;
+    text-align: center;
   }
   
   .card-body p {
@@ -32,9 +43,12 @@
     color: #555;
     font-size: 1em;
     line-height: 1.6em;
+    text-align: center;
   }
   .btn-container {
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
   }
   
   .btn {
