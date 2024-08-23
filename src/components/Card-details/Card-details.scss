@@ -1,8 +1,9 @@
 
+/* Css pour le une carte en details */
 .background-image {
   position: relative;
-  width: 80%;
-  height: 300px;
+  width: 40%;
+  height: 18.7rem;
   background-image: url('img.png');
   background-size: cover; /* Couvre toute la div */
   background-position: center; /* Centre l'image */
@@ -11,7 +12,7 @@
 }
 .text-overlay {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
