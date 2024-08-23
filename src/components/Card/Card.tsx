@@ -1,15 +1,20 @@
 import "./Card.scss";
+import { IRecipe } from '../../@types';
 
-function Card() {
+interface CardProps {
+  recipe: IRecipe;
+}
+
+function Card({ recipe }: CardProps) {
   return (
     <article className="cards">
       <div className="card">
         <div className="card-header">
-          <img src="img.png" />
+          <img src={recipe.thumbnail} alt={recipe.title} />
         </div>
         <div className="card-body">
-          <h2>Titre de la Carte</h2>
-          <p>description.</p>
+          <h2>{recipe.title}</h2>
+          <p>{recipe.difficulty}</p>
           <div className="btn-container">
             <a href="#" className="btn">
               Voir Détails
