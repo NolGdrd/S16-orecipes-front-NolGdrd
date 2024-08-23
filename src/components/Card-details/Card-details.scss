@@ -37,8 +37,11 @@
 .colored-div {
   background-color: rgb(0, 174, 255); /* Couleur de fond de la div */
   color: white; /* Couleur du texte */
-  border-radius: 8px; /* Coins arrondis */
+  border-radius: 20%; /* Coins arrondis */
   padding: 0.5rem;
+  display: inline-block;
+  width: 3rem;
+  text-align: center;
 }
 
 .list1 {
