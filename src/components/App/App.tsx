@@ -1,3 +1,4 @@
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.scss'
@@ -47,7 +48,13 @@ function App() {
         <Header />
 
         {
-          isLoading ? ( <Spinner /> ) : (<Cards recipes={recipes}/>)
+          isLoading ? ( <Spinner /> ) : (
+          <Routes>
+            <Route 
+            path='/'
+            element={<Cards recipes={recipes}/>} />
+          </Routes>
+          )
         }
         
       </div>
