@@ -1,17 +1,28 @@
 import "./NavSideBar.scss";
+import type { IRecipe } from '../../@types/index';
+import { Link, NavLink } from "react-router-dom";
 
-function NavSideBar() {
+interface NavSideBarProps {
+  recipes: IRecipe[];
+}
+
+function NavSideBar({ recipes }: NavSideBarProps) {
     return (
         <nav className="nav-side-bar">
-            
-                <a className="nav-side-bar-item" href="#">Accueil</a>
-                <a className="nav-side-bar-item" href="#">Cookies au beurre de cacahuète</a>
-                <a className="nav-side-bar-item" href="#">Macaron framboisier</a>
-                <a className="nav-side-bar-item" href="#">Tarte au citron meringuée</a>
-                <a className="nav-side-bar-item" href="#">Amandier</a>
-                <a className="nav-side-bar-item" href="#">Fondant au chocolat sans gluten</a>
-                <a className="nav-side-bar-item" href="#">Tarte banoffee</a>
-            
+            <Link className="nav-side-bar-item" to="/">Accueil</Link>
+            {
+                recipes.map(recipe => {
+                    return (
+                        <Link
+                            key={recipe.slug}  
+                            className="nav-side-bar-item" 
+                            to={`/${recipe.slug}`} 
+                        >
+                            {recipe.title}  
+                        </Link>
+                    )
+                })
+            }
         </nav>
     )
 }

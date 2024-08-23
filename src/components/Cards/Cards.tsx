@@ -10,7 +10,7 @@ function Cards({ recipes }: CardsProps) {
   return (
     <div className="container-list-card">
       <div className="div-title">
-        <h1>Les recettes oRrecipes</h1>
+        <h1>Les recettes oRecipes</h1>
       </div>
       <h2 className="sub-title">Voici nos recettes</h2>
 
