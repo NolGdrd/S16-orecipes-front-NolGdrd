@@ -1,5 +1,5 @@
 import "./Card.scss";
-import { IRecipe } from '../../@types';
+import type { IRecipe } from '../../@types';
 
 interface CardProps {
   recipe: IRecipe;

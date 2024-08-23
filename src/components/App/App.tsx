@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.scss'
 import Header from '../Header/Header'
 import NavSideBar from '../NavSideBar/NavSideBar'
 import Cards from '../cards/Cards'
 
-import { IRecipe, IIngredient } from '../../@types'
-import { get } from 'http'
+import type { IRecipe, IIngredient } from '../../@types'
+
 
 
 function App() {
@@ -17,16 +17,7 @@ function App() {
   // const [ingredients, setIngredients] = useState<IIngredient[]>([]);
   // const [isLoading, setIsLoading] = useState(false);
 
-  // const loadRecipes = async () => {
-  //   try{
-  //     const response = await fetch('https://orecipesapi.onrender.com/api/recipes');
-  //     const data = await response.json();
-  //     setRecipes(data);
 
-  //   } catch(error){
-  //     console.error('Erreur lors du chargement des recettes',error);
-  //   }
-  // }
 
   useEffect(() => {
     const getRecipes = async () => {
