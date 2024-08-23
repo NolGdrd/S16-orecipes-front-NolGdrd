@@ -5,7 +5,9 @@ import Header from '../Header/Header'
 import NavSideBar from '../NavSideBar/NavSideBar'
 import Cards from '../cards/Cards'
 
+
 import type { IRecipe, IIngredient } from '../../@types'
+import Spinner from '../Spinner/Spinner'
 
 
 
@@ -15,7 +17,7 @@ function App() {
 
   const [recipes, setRecipes] = useState<IRecipe[]>([]);
   // const [ingredients, setIngredients] = useState<IIngredient[]>([]);
-  // const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
 
 
@@ -27,6 +29,7 @@ function App() {
       } catch(e) {
         console.error('Erreur lors du chargement des recettes', e);
       }
+      setIsLoading(false);
     };
   
     getRecipes();
@@ -42,7 +45,11 @@ function App() {
       <div className="app">
         <NavSideBar />
         <Header />
-        <Cards recipes={recipes}/>
+
+        {
+          isLoading ? ( <Spinner /> ) : (<Cards recipes={recipes}/>)
+        }
+        
       </div>
       
     </>
