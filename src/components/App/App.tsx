@@ -1,7 +1,7 @@
-
 import './App.scss'
 import Header from '../Header/Header'
 import NavSideBar from '../NavSideBar/NavSideBar'
+import Cards from '../cards/Cards'
 
 function App() {
 console.log('bbbbbbbb')
@@ -12,6 +12,7 @@ console.log('bbbbbbbb')
       <div className="app">
         <NavSideBar />
         <Header />
+        <Cards />
       </div>
       
     </>
