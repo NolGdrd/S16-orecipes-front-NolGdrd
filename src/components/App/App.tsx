@@ -55,8 +55,8 @@ function App() {
     
     <>
       <div className="app">
-        <NavSideBar />
-        <Header />
+        <NavSideBar recipes={recipes} />
+        <Header  />
 
         {
           isLoading ? ( <Spinner /> ) : (
