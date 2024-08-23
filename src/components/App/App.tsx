@@ -4,7 +4,8 @@ import axios from 'axios'
 import './App.scss'
 import Header from '../Header/Header'
 import NavSideBar from '../NavSideBar/NavSideBar'
-import Cards from '../Cards/Cards'
+import Cards from '../cards/Cards'
+import CardDetails from '../Card-details/Card-details'
 
 
 import type { IRecipe, IIngredient } from '../../@types'
@@ -17,7 +18,7 @@ function App() {
   
 
   const [recipes, setRecipes] = useState<IRecipe[]>([]);
-  // const [ingredients, setIngredients] = useState<IIngredient[]>([]);
+  const [ingredients, setIngredients] = useState<IIngredient[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
 
@@ -32,8 +33,18 @@ function App() {
       }
       setIsLoading(false);
     };
+
+    const getIngredients = async () => {
+      try {
+        const result = await axios.get("https://orecipesapi.onrender.com/api/ingredients");
+        setIngredients(result.data);
+      } catch(e) {
+        console.error('Erreur lors du chargement des ingrédients', e);
+      }
+    };
   
     getRecipes();
+    getIngredients();
   }, []);
 
   
@@ -49,10 +60,18 @@ function App() {
 
         {
           isLoading ? ( <Spinner /> ) : (
-          <Routes>
+            <Routes>
             <Route 
-            path='/'
-            element={<Cards recipes={recipes}/>} />
+              path='/'
+              element={<Cards recipes={recipes}/>} 
+            />
+            {recipes.map(recipe => (
+              <Route 
+                key={recipe.id}
+                path={`/${recipe.slug}`}
+                element={<CardDetails recipe={recipe} />}
+              />
+            ))}
           </Routes>
           )
         }

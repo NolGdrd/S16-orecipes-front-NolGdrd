@@ -1,33 +1,31 @@
-import "./Card.scss";
+import "./Card-details.scss";
+import type { IRecipe } from "../../@types/index";
 
-function Card() {
+interface CardProps {
+  recipe: IRecipe;
+}
+
+function Card({ recipe }: CardProps) {
   return (
-    <div>
-      <div className="background-image">
+    <div className="recipe-details">
+      <div className="background-image" style={{backgroundImage: `url(${recipe.thumbnail})`}}>
         <div className="text-overlay">
-          <h1>blabla</h1>
-          <p>fekhleglehnelrkleggege</p>
+          <h1>{recipe.title}</h1>
+          <p>{recipe.description}</p>
         </div>
       </div>
 
       <ul className="list1">
-        <li>
-      
-          <span className="colored-div"> 20g</span> Élément 1
-        </li>
-        <li>
-          <span className="colored-div"> 20g</span> Élément 2
-        </li>
-        <li>
-          <span className="colored-div"> 20g</span> Élément 3
-        </li>
-        <li>Élément 4</li>
+        {recipe.ingredients.map(ingredient => (
+          <li key={ingredient.id}>
+            <span className="colored-div">{ingredient.quantity}{ingredient.unit}</span> {ingredient.name}
+          </li>
+        ))}
       </ul>
       <ul className="list2">
-        <li>Élément 1</li>
-        <li>Élément 2</li>
-        <li>Élément 3</li>
-        <li>Élément 4</li>
+        {recipe.instructions.map((instruction, index) => (
+          <li key={index}>{instruction}</li>
+        ))}
       </ul>
     </div>
   );
