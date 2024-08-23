@@ -1,10 +1,10 @@
 import './App.scss'
 import Header from '../Header/Header'
 import NavSideBar from '../NavSideBar/NavSideBar'
-import Cards from '../cards/Cards'
+import Cards from '../Cards/Cards'
 
 function App() {
-console.log('bbbbbbbb')
+
   return (
 
     
