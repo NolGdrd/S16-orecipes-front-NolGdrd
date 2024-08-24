@@ -42,9 +42,23 @@
         border: none;
         padding: 0.7rem;
     }
+    &-button-logout{
+        background-color: rgb(32,156,238);
+        color: #fff;
+        border-radius: 20%;
+        border: none;
+        padding:0.7rem;
+        margin: 0.5rem;
+    }
 }
 
 .logo{
     height: 4rem;
+}
+
+.user-info-welcome{
+    font-size:large;
+    font-weight: bold;
+    color: rgb(32,156,238);
 }
 
