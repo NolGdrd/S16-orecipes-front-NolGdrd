@@ -9,3 +9,6 @@ Objectif : Réaliser une interface front en React
 - afficher les données de l'API fournie
 - Router et création des pages recette
 - Validation des donnée du formulaire par le back et afficher un message en fonction de la réponse
+
+
+Il s'agit d'un projet réalisé en pair programming.
