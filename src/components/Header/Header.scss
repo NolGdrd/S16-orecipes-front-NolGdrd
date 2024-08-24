@@ -6,9 +6,23 @@
     padding: 1rem 2rem;
     width: 80%;
     top: 0;
-    position:absolute;
+    position:fixed;
     margin-left: 20%;
     height: 5rem;
+    background-color: #fff;
+    z-index: 1000;
+
+    &-title{
+        color: rgb(32,156,238);
+        font-size: 2rem; 
+        padding-left: 1rem;
+    }
+
+    &-logo{
+        display: flex;
+        align-items: center;
+        width: 40%;
+    }
 }
 
 .auth-form{

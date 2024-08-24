@@ -1,6 +1,6 @@
 import "./NavSideBar.scss";
 import type { IRecipe } from '../../@types/index';
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface NavSideBarProps {
   recipes: IRecipe[];
@@ -9,17 +9,21 @@ interface NavSideBarProps {
 function NavSideBar({ recipes }: NavSideBarProps) {
     return (
         <nav className="nav-side-bar">
-            <Link className="nav-side-bar-item" to="/">Accueil</Link>
+            <NavLink  className={({ isActive }) => 
+                    isActive ? "nav-side-bar-item active" : "nav-side-bar-item"
+                }  to="/">Accueil</NavLink>
             {
                 recipes.map(recipe => {
                     return (
-                        <Link
+                        <NavLink
                             key={recipe.slug}  
-                            className="nav-side-bar-item" 
+                            className={({ isActive }) => 
+                                isActive ? "nav-side-bar-item active" : "nav-side-bar-item"
+                            }
                             to={`/${recipe.slug}`} 
                         >
                             {recipe.title}  
-                        </Link>
+                        </NavLink>
                     )
                 })
             }
