@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MdLogin } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
 import "./Header.scss";
 
@@ -83,7 +84,7 @@ function Header() {
                             onChange={(e) => setPassword(e.target.value)} 
                         />
                     </div>
-                    <button type="submit" className="auth-form-button">OK</button>
+                    <button type="submit" className="auth-form-button"><MdLogin /></button>
                     {errorMessage && (
                         <div className="error-message">
                             {errorMessage}
