@@ -4,7 +4,7 @@ import axios from 'axios'
 import './App.scss'
 import Header from '../Header/Header'
 import NavSideBar from '../NavSideBar/NavSideBar'
-import Cards from '../Cards/Cards'
+import Cards from '../cards/Cards'
 import CardDetails from '../Card-details/Card-details'
 
 
