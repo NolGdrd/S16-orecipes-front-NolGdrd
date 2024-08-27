@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes,  } from "react-router-dom";
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.scss'
@@ -67,7 +67,7 @@ function App() {
               element={<Cards recipes={recipes}/>} 
             />
             {recipes.map(recipe => (
-              <Route key={recipe.id} path={`/${recipe.slug}`} element={<CardDetails recipe={recipe} />}
+              <Route key={recipe.id} path={`/${recipe.slug}`} element={<CardDetails recipe={recipe} ingredient={ingredients}/>}
               />
             ))}
             <Route path="*" element={<NotFound/>}/>
