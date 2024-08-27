@@ -3,6 +3,7 @@ import type { IRecipe } from "../../@types/index";
 
 interface CardProps {
   recipe: IRecipe;
+  ingredients: IRecipe[];
 }
 
 function Card({ recipe }: CardProps) {
