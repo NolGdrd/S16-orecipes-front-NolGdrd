@@ -6,9 +6,23 @@
     padding: 1rem 2rem;
     width: 80%;
     top: 0;
-    position:absolute;
+    position:fixed;
     margin-left: 20%;
     height: 5rem;
+    background-color: #fff;
+    z-index: 1000;
+
+    &-title{
+        color: rgb(32,156,238);
+        font-size: 2rem; 
+        padding-left: 1rem;
+    }
+
+    &-logo{
+        display: flex;
+        align-items: center;
+        width: 40%;
+    }
 }
 
 .auth-form{
@@ -27,10 +41,25 @@
         border-radius: 20%;
         border: none;
         padding: 0.7rem;
+        font-weight: bold;
+    }
+    &-button-logout{
+        background-color: rgb(32,156,238);
+        color: #fff;
+        border-radius: 20%;
+        border: none;
+        padding:0.7rem;
+        margin: 0.5rem;
     }
 }
 
 .logo{
     height: 4rem;
+}
+
+.user-info-welcome{
+    font-size:large;
+    font-weight: bold;
+    color: rgb(32,156,238);
 }
 

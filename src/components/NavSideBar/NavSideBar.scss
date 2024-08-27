@@ -19,12 +19,14 @@
         
     }
 
-    &-item-active{
-        border-right: 4px solid rgb(0, 174, 255);
-    }
+    
 
     &-item:hover{
         color:rgb(32,156,238);
         border-right: 4px solid rgb(0, 174, 255);
     }
+}
+
+.active{
+    border-right: 4px solid rgb(0, 174, 255);
 }
